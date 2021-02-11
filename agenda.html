@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="agenda.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <agenda-dia>
+    <fecha-agenda fecha="2020-03-15T12:30:00Z"></fecha-agenda>
+    
+  
+    <lista-tareas>
+      <elemento-tarea>
+        Completar cada componente
+      </elemento-tarea>
+      <elemento-tarea>
+        Formatear fecha
+      </elemento-tarea>
+      <elemento-tarea completada="true">
+        Abrirse una birra
+      </elemento-tarea>
+      <elemento-tarea>
+        Llorar por JavaScript
+      </elemento-tarea>      
+    </lista-tareas>
+  
+  </agenda-dia>
+
+  <template id="agenda-dia"><slot></slot></template>
+
+    
+  <template id="elemento-tarea">
+    <li class="tarea"><slot>Texto de la tarea</slot></li>   
+  
+    <div class="checkbox">⚪</div>
+      
+    
+  </template>  
+  
+  <template id="fecha-agenda">
+    <h1>Día</h1>
+    <div>Mes 1, 2020</div>
+    <hr>
+  </template>
+
+  <template id="lista-tareas">
+    <link href="lista-tareas.css" rel="stylesheet" type="text/css" />
+    
+    <ul><slot></slot></ul>
+    
+  </template>
+  
+  <script src="utilidades.js"></script>
+  <script src="agenda-dia.js"></script>
+  <script src="elemento-tarea.js"></script>
+  <script src="fecha-agenda.js"></script>
+  <script src="lista-tareas.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+}  
+
+elemento-tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+lista-tareas {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  align-items: space-between;
+}
+
+p {
+  margin: 0;
+}
